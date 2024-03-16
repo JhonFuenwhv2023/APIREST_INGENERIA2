@@ -1,8 +1,8 @@
 const { Schema, model} = require('mongoose'); 
 
 const DirectorSchema = Schema({
-    name : {type: String, required: true},
-    status: {type: String, required: true, enum: ['Active', 'Inactive']},
+    names : {type: String, required: true},
+    status: {type: String, required: true, enum: ['Activo', 'Inactivo']},
     fechaCreacion: {type: Date, required: true},
     fechaActualizacion: {type: Date, required: true}
 

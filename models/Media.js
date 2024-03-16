@@ -13,7 +13,23 @@ const MediaSchema = Schema({
         type: Schema.Types.ObjectId,
         ref: 'Genero',
         required: false
+    },
+    DirectorPrincipal: {
+        type: Schema.Types.ObjectId,
+        ref: 'Director',
+        required: true
+    },
+    ProductoraPrincipal: {
+        type: Schema.Types.ObjectId,
+        ref: 'Productora',
+        required: true
+    },
+    TipoPrincipal: {
+        type: Schema.Types.ObjectId,
+        ref: 'Tipo',
+        required: true
     }
+
 
 });
 

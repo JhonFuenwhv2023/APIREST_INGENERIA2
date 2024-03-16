@@ -4,7 +4,7 @@ const {validationResult, check } = require('express-validator');
 
 const router = Router();
 
-//  Crar productora
+//  Crear productora
 router.post('/',[
     check('name', 'El nombre es requerido').not().isEmpty(),
     check('status', 'El status es requerido').isIn([ 'Activo', 'Inactivo']),

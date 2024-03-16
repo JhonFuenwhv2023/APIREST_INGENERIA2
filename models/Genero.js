@@ -7,10 +7,10 @@ const generoSchema = mongoose.Schema({
     status: {
         type: String
     },
-    date_create:{
+    fechaCreacion:{
         type: Date
     },
-    date_update:{
+    fechaActualizacion:{
         type: Date
     },
     description:{

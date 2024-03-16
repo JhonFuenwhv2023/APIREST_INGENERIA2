@@ -17,7 +17,12 @@ getConnection();
 
 app.use(express.json());
 
+app.use('/media', require('/router/media'));
 app.use('/productora', require('./router/productora'));
+app.use('/genero', require('./router/genero'));
+app.use('/director', require('./router/director'));
+app.use('/tipo', require('./router/tipo'));
+
 
 
 
