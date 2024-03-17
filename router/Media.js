@@ -34,8 +34,8 @@ router.post('/', [
             mensaje: 'Ya existe una Media con ese nombre'});
     }
 
-    let media= new Media();
-    media = req.body.serial;
+    let media = new Media();
+    media.serial = req.body.serial;
     media.titulo = req.body.titulo;
     media.sinopsis = req.body.sinopsis;
     media.url = req.body.url;
@@ -107,13 +107,13 @@ router.put('/:mediaId',[
 
     const existeMedia = await Media.findOne ({name : req.body.name, _id: { $ne: media._id} });
 
-    if (mega) {
+    if (existeMedia) {
         return res.status(400).json({ 
             mensaje: 'Ya existe una media con ese nombre'});
     }
 
     
-    media = req.body.serial;
+    media.serial = req.body.serial;
     media.titulo = req.body.titulo;
     media.sinopsis = req.body.sinopsis;
     media.url = req.body.url;
